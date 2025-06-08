@@ -59,7 +59,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(assets/heroBackground.png);
+    background-image: url(assets/heroBackgroundBW.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -97,7 +97,12 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+#roadside{ 
+    background: #D4EDDE;
+}
+#irist{
+    background: #CFE6F2;
+}
 .product-card {
     background: #F8F8FF;
     border-radius: 10px;
@@ -132,7 +137,7 @@ nav {
 .cta-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: #1b8691;
+    background-color: #333;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -141,12 +146,12 @@ nav {
 }
 
 .cta-button:hover {
-    background-color: #105c68;
+    background-color: #575757;
 }
 
 /* Footer */
 footer {
-    background-color: #0d4653;
+    background-color: #333;
     color: white;
     padding: 3rem 1rem 1rem;
 }

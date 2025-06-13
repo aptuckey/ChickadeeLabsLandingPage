@@ -1,3 +1,5 @@
+@import url('shared.css');
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -12,44 +14,7 @@ body {
 }
 
 /* Header and Navigation */
-header {
-    background-color: #F8F8FF;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo-container {
-    width: 150px;
-}
-
-.logo {
-    width: 100%;
-    height: auto;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333333;
-    margin-left: 2rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #105c68;
-}
+        /*imported*/
 
 /* Hero Section */
 .hero {
@@ -69,7 +34,7 @@ nav {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: #F8F8FF;
+    color: var(--chickadee-white);
 }
 
 .tagline {
@@ -80,7 +45,7 @@ nav {
 /* Products Section */
 .products {
     padding: 5rem 1rem;
-    background-color: #F8F8FF;
+    background-color: var(--chickadee-white);
 }
 
 .products h2 {
@@ -98,13 +63,13 @@ nav {
     margin: 0 auto;
 }
 #roadside{ 
-    background: #D4EDDE;
+    background: #E3F3EA;
 }
 #irist{
-    background: #CFE6F2;
+    background: #DDEBF8;
 }
 .product-card {
-    background: #F8F8FF;
+    background: var(--chickadee-white);
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
@@ -137,8 +102,8 @@ nav {
 .cta-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: #333;
-    color: white;
+    background-color: var(--chickadee-gray);
+    color: var(--chickadee-white);   
     text-decoration: none;
     border-radius: 5px;
     margin-top: 1rem;
@@ -151,8 +116,8 @@ nav {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--chickadee-gray);
+    color: var(--chickadee-white);
     padding: 3rem 1rem 1rem;
 }
 
@@ -174,7 +139,7 @@ footer {
 }
 
 .social-links a {
-    color: white;
+    color: var(--chickadee-white);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -203,4 +168,5 @@ footer {
     .nav-links {
         display: none;
     }
-} 
+}
+

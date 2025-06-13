@@ -1,0 +1,315 @@
+@import url('../shared.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-green: #0e1824;
+    --light-green: #465ab1;
+    --pale-green: #DDEBF8;
+    --dark-green: #0B2A4A;
+    --accent-green: #61A5C2;
+
+}
+
+/* Roadside-specific and override styles */
+
+.roadside-hero {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0;
+    background: var(--primary-green);
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero-content {
+    flex-shrink: 0;
+    max-width: 50%;
+    padding: 8rem 4rem;
+    color: var(--chickadee-white);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 320px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: var(--chickadee-white);
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-family: Raleway;
+}
+.hero-content p {
+  
+    font-family: Raleway;
+}
+
+.hero-content .tagline {
+    font-size: 1.5rem;
+    color: var(--pale-green);
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-green);
+}
+
+.hero-image img.hero-banner {
+    width: 100%;
+    height: 100vh;
+    max-width: none;
+    object-fit: cover;
+    object-position: right center;
+    display: block;
+    position: static;
+    background: var(--dark-green);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+    background-color: #ffffff;
+    color: var(--primary-green);
+    border: 2px solid #ffffff;
+}
+
+.cta-button.primary:hover {
+    background-color: var(--pale-green);
+    border-color: var(--pale-green);
+    color: var(--primary-green);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--primary-green);
+    color: var(--chickadee-white);
+}
+
+/* Mission Section */
+.mission {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: var(--chickadee-white);
+    position: relative;
+}
+
+.mission::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), var(--light-green));
+}
+
+.mission h2 {
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.mission p {
+    max-width: 800px;
+    margin: 1rem auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Form Sections */
+.beta-signup, .request-produce {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: var(--pale-green);
+}
+
+.beta-signup p {
+    max-width: 800px;
+    margin: 1rem auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.beta-signup h2, .request-produce h2 {
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.signup-form, .request-form {
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.signup-form input, .request-form input, .request-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.signup-form input:focus, .request-form input:focus, .request-form textarea:focus {
+    outline: none;
+    border-color: var(--light-green);
+}
+
+.request-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Download Section */
+.download {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: var(--chickadee-white);
+}
+
+.download h2 {
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.store-button img {
+    height: 56px;
+    transition: transform 0.3s;
+}
+
+.store-button:hover img {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-green);
+    color: var(--chickadee-white);
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-info h3, .social-links h3 {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--chickadee-white);
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-content {
+        max-width: 60%;
+        padding: 6rem 2rem;
+    }
+}
+@media (max-width: 900px) {
+    .hero-content {
+        max-width: 80%;
+        padding: 4rem 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .roadside-hero {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 6rem 2rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-image {
+        height: 50vh;
+    }
+
+    .hero-image img.hero-banner {
+        height: 50vh;
+        width: 100vw;
+        max-width: none;
+        object-fit: cover;
+        object-position: right center;
+        position: static;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .store-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+    }
+} 

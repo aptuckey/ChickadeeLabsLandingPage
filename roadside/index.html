@@ -3,94 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roadside - Find and Sell Local Produce</title>
-    <link rel="stylesheet" href="../shared.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="../assets/bird2.ico">
+    <title>Roadside</title>
+    <link rel="icon" type="image/x-icon" href="assets/RoadsideFavicon.ico">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Custom Tailwind configuration to include the new color palette
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark-green': '#255439',
+                        'brand-green': '#5DB146',
+                        'brand-yellow': '#FEC909',
+                        'brand-dark-gray': '#58595B',
+                        'brand-light-gray': '#A7A9AC',
+                        'brand-cream': '#F5F3EE',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo-container">
-                <a href="../index.html">
-                    <img src="../assets/logoBW.png" alt="Chickadee Labs Logo" class="logo">
-                </a>
+<body class="bg-brand-cream text-brand-dark-gray font-sans">
+
+    <!-- Header -->
+    <header class="bg-brand-cream/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="bg-brand-dark-green rounded-full p-2">
+                    <img src="assets/RoadsideLogo.png" alt="Roadside Logo" class="h- w-8">
+                </div>
+                <span class="text-xl font-bold text-brand-dark-green">Roadside</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="hover:text-brand-green transition-colors duration-300">Home</a>
+                <a href="#signup" class="hover:text-brand-green transition-colors duration-300">Beta Signup</a>
+                <a href="#download" class="hover:text-brand-green transition-colors duration-300">Download</a>
             </div>
-            <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="../index.html#products">Products</a>
-                <a href="../index.html#contact">Contact</a>
-            </div>
+             <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-brand-dark-green focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="../index.html" class="block py-2 hover:text-brand-green">Home</a>
+            <a href="#signup" class="block py-2 hover:text-brand-green">Beta Signup</a>
+            <a href="#download" class="block py-2 hover:text-brand-green">Download</a>
+        </div>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <section class="hero roadside-hero">
-            <div class="hero-content">
-                <h1>Roadside</h1>
-                <p class="tagline">Eat Well. Support Local</p>
-                <div class="hero-buttons">
-                    <a href="#beta-signup" class="cta-button primary">Join the Beta</a>
-                    <!-- <a href="#request-produce" class="cta-button secondary">Request Produce Type</a> -->
+
+        <!-- Hero Section -->
+        <section class="bg-brand-dark-green text-white">
+            <div class="container mx-auto px-6 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-brand-yellow">Eat Well. Buy Local.</h1>
+                    <p class="text-lg md:text-xl text-brand-cream/80 mb-8">Roadside connects you with fresh, local produce from nearby roadside stands and small-scale growers.</p>
+                    <a href="#signup" class="bg-brand-yellow text-brand-dark-gray font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-transform duration-300 inline-block transform hover:scale-105">Join the Beta</a>
+                </div>
+                <div class="flex justify-center">
+                    <img src="assets/RoadsideLogo.png" alt="Roadside App Banner" class="rounded-3xl shadow-2xl transform md:rotate-6">
+                </div>
+            </div>  
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+                <!-- Image with gradient overlay -->
+                <div class="relative">
+                    <img src="assets/DemoPhoto.png" class="rounded-2xl w-full" alt="A local farm stand with fresh produce">
+                    <!-- The gradient fades from transparent on the left to the cream background color on the right -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-brand-cream"></div>
+                </div>
+                <!-- Text content -->
+                <div class="text-center md:text-left md:-ml-16 relative z-10">
+                     <div class="bg-brand-cream p-8 rounded-xl">
+                        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark-green mb-6">Our Mission</h2>
+                        <p class="text-lg text-brand-dark-gray/80">
+                            At Roadside, our mission is to connect communities with fresh, local produce by making it easy to discover and support roadside stands and small-scale growers — empowering healthier choices and reducing food miles.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/Banner.jpg" alt="Roadside App Banner" class="hero-banner">
+        </section>
+
+        <!-- Beta Signup Section -->
+        <section id="signup" class="bg-brand-green">
+            <div class="container mx-auto px-6 py-20 md:py-28 text-center text-white">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Join the Beta</h2>
+                 <p class="text-lg text-brand-cream/90 mb-8 max-w-2xl mx-auto">Be among the first to experience Roadside and help shape its future. Sign up now for early access and exclusive updates.</p>
+                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7v_-QgmM5bvQotzCZgHRbvsadal_oOFWX0vB-hNanlkEgBg/viewform" target="_blank" class="bg-brand-dark-green text-white font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-transform duration-300 inline-block transform hover:scale-105">Sign Up Now</a>
+            </div>
+        </section>
+        
+        <!-- Download Section -->
+        <section id="download" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark-green mb-6">Coming Soon to an App Store Near You</h2>
+                <p class="text-lg text-brand-dark-gray/80 mb-8">We're working hard to bring Roadside to your favorite app store.</p>
+                <div class="flex justify-center items-center space-x-6 text-brand-light-gray">
+                    <!-- <div class="text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                        <p class="mt-2 font-semibold">App Store</p>
+                    </div>
+                    <div class="text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        <p class="mt-2 font-semibold">Google Play</p> -->
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="mission">
-            <h2>Our Mission</h2>    
-            <p>At Roadside, our mission is to connect communities with fresh, local produce by making it easy to discover and support roadside stands and small-scale growers — empowering healthier choices, reducing food miles.</p>
-        </section>
-
-        <section id="beta-signup" class="beta-signup">
-            <h2>Join the Beta</h2>
-            <p>Be among the first to experience Roadside and help shape its future.</p>
-            <form class="signup-form">
-                <!-- <input type="email" placeholder="Enter your email" required> -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7v_-QgmM5bvQotzCZgHRbvsadal_oOFWX0vB-hNanlkEgBg/viewform" class="cta-button secondary">Sign Up</a>
-            </form>
-        </section>
-
-        <!-- <section id="request-produce" class="request-produce">
-            <h2>Request New Produce Type</h2>
-            <p>Don't see what you're looking for? Let us know what produce types you'd like to see on Roadside.</p>
-            <form class="request-form">
-                <input type="text" placeholder="Produce type" required>
-                <textarea placeholder="Additional details (optional)"></textarea>
-                <button type="submit" class="cta-button primary">Submit Request</button>
-            </form>
-        </section> -->
-
-        <section class="download">
-            <h2>Download Roadside</h2>
-            <div class="store-buttons">
-                
-                <p class="tagline">Comming Soon...</p>
-                <!-- <a href="#" class="store-button">
-                    <img src="../assets/app-store-badge.png" alt="Download on the App Store">
-                </a>
-                <a href="#" class="store-button">
-                    <img src="../assets/google-play-badge.png" alt="Get it on Google Play">
-                </a> -->
-            </div>
-        </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Email: support@chickadee-labs.com</p>
+    <!-- Footer -->
+    <footer class="bg-brand-dark-gray text-brand-cream">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-2 gap-8 text-center md:text-left">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <a href="mailto:support@chickadee-labs.com" class="text-brand-cream/80 hover:text-brand-yellow transition-colors duration-300">support@chickadee-labs.com</a>
+                </div>
+                <!-- Social Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <a href="https://www.linkedin.com/company/chickadee-labs/" target="_blank" class="text-brand-cream/80 hover:text-brand-yellow transition-colors duration-300">LinkedIn</a>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/chickadee-labs/" target="_blank">LinkedIn</a>
+            <div class="mt-12 border-t border-brand-light-gray/20 pt-6 text-center text-brand-cream/60">
+                <p>&copy; 2025  Roadside. All rights reserved.</p>
             </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2025 Chickadee Labs. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
 </body>
-</html> 
+</html>

@@ -4,68 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chickadee Labs</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="assets/bird2.ico">
+    <link rel="icon" type="image/x-icon" href="assets/new_CL_favicon.ico">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Custom Tailwind configuration to include your color palette
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-light-cream': '#F1F7ED',
+                        'brand-dark-slate': '#243E36',
+                        'brand-sage': '#7CA982',
+                        'brand-light-green': '#E0EEC6',
+                        'brand-gold': '#C2A83E',
+                        'roadside-green':'#255439',
+                        'irist-blue':'#0B2A4A'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Simple smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Adding a subtle pattern to the hero section for texture */
+        .hero-pattern {
+            background-color: #243e36;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%237ca982' fill-opacity='0.1' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.99-7.5L26 15v19L13 41.5 0 34V15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo-container">
-                <!-- Logo placeholder -->
-                <img src="assets/logoBW.png" alt="Chickadee Labs Logo" class="logo">
+<body class="bg-brand-light-cream text-brand-dark-slate font-sans">
+
+    <!-- Header -->
+    <header id="home" class="bg-brand-light-cream/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- UPDATED: Logo with colored circle background -->
+                <div class="bg-brand-sage rounded-full flex items-center justify-center h-12 w-12 shadow-sm">
+                    <img src="assets/New_CL_Logo.png" alt="Chickadee Labs Logo" class="h-8 w-8">
+                </div>
+                <span class="text-xl font-bold text-brand-dark-slate">Chickadee Labs</span>
             </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#products">Products</a>
-                <a href="#contact">Contact</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-brand-dark-slate hover:text-brand-gold transition-colors duration-300">Home</a>
+                <a href="#products" class="text-brand-dark-slate hover:text-brand-gold transition-colors duration-300">Products</a>
+                <a href="#contact" class="text-brand-dark-slate hover:text-brand-gold transition-colors duration-300">Contact</a>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-brand-dark-slate focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-brand-dark-slate hover:text-brand-gold">Home</a>
+            <a href="#products" class="block py-2 text-brand-dark-slate hover:text-brand-gold">Products</a>
+            <a href="#contact" class="block py-2 text-brand-dark-slate hover:text-brand-gold">Contact</a>
+        </div>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <section class="hero">
-            <h1>Chickadee Labs</h1>
-            <p class="tagline">Let us cook</p>
+        <!-- Hero Section -->
+        <section class="hero-pattern min-h-[60vh] md:min-h-[70vh] flex items-center justify-center text-center text-white p-6">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-down">Welcome to Chickadee Labs</h1>
+                <p id="slogan" class="text-lg md:text-xl text-brand-light-cream/80 animate-fade-in-up h-8"></p>
+            </div>
         </section>
 
-        <section id="products" class="products">
-            <h2>Things we've served up</h2>
-            <div class="product-grid">
-                <div id="roadside":  class="product-card">
-                    <div class="product-image">
-                        <!-- Product 1 image placeholder -->
-                        <img src="assets/RoadsideIconShadow.png" alt="Product 1">
-                    </div>
-                    <h3>Roadside</h3>
-                    <p>Find and sell local produce</p>
-                    <a href="roadside/index.html" class="cta-button">Learn More</a>
+        <!-- Products Section -->
+        <section id="products" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark-slate">Things We've Served Up</h2>
+                    <p class="text-brand-dark-slate/70 mt-2">A showcase of our passion projects.</p>
                 </div>
-                <div id="irist": class="product-card">
-                    <div class="product-image">
-                        <!-- Product 2 image placeholder -->
-                        <img src="assets/IristIconShadow.png" alt="Product 2">
+                <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                    <!-- Product Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="p-8 bg-roadside-green">
+                           <img src="assets/RoadsideLogo.png" alt="Roadside App Icon" class="w-full h-48 object-contain rounded-lg">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-2 text-brand-dark-slate">Roadside</h3>
+                            <p class="text-brand-dark-slate/80 mb-6">A fresh way to find and sell local produce, connecting communities with farmers.</p>
+                            <a href="roadside/index.html" class="inline-block bg-brand-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors duration-300">Learn More</a>
+                        </div>
                     </div>
-                    <h3>Project Irist</h3>
-                    <p>The best 20-20-20 Timer for Windows</p>
-                    <a href="projectIrist/index.html" class="cta-button">Learn More</a>
+                    <!-- Product Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                         <div class="p-8 bg-irist-blue">
+                           <img src="assets/IristLogo.png" alt="Project Irist App Icon" class="w-full h-48 object-contain rounded-lg">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-2 text-brand-dark-slate">Project Irist</h3>
+                            <p class="text-brand-dark-slate/80 mb-6">The essential 20-20-20 timer for Windows to help protect your eyes during screen time.</p>
+                            <a href="projectIrist/index.html" class="inline-block bg-brand-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors duration-300">Learn More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div id="contact" class="footer-content">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Email: support@chickadee-labs.com</p>
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-dark-slate text-brand-light-cream">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p class="text-brand-light-cream/80">Have a question or want to work with us?</p>
+                    <a href="mailto:support@chickadee-labs.com" class="text-brand-gold hover:underline mt-2 inline-block">support@chickadee-labs.com</a>
+                </div>
+                <!-- Social Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://www.linkedin.com/company/chickadee-labs/" target="_blank" class="text-brand-light-cream/80 hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                        </a>
+                    </div>
+                </div>
+                 <!-- Quick Links -->
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" class="text-brand-light-cream/80 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li class="mt-2"><a href="#products" class="text-brand-light-cream/80 hover:text-white transition-colors duration-300">Products</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/chickadee-labs/" target="_blank">LinkedIn</a>
+            <div class="mt-12 border-t border-brand-sage/20 pt-6 text-center text-brand-light-cream/60">
+                <p>&copy; 2025 Chickadee Labs. All rights reserved.</p>
             </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2025 Chickadee Labs. All rights reserved.</p>
         </div>
     </footer>
+
+     <script>
+        // Wait for the DOM to be fully loaded before running scripts
+        document.addEventListener('DOMContentLoaded', () => {
+            const slogans = [
+                "Let us cook.",
+                "The softest software.",
+                "Drink your tea.",
+                "You know what they say...",
+                "We'll burn that bridge when we get to it."
+            ];
+            
+            const sloganElement = document.getElementById('slogan');
+            if (sloganElement) {
+                const randomIndex = Math.floor(Math.random() * slogans.length);
+                sloganElement.textContent = slogans[randomIndex];
+            }
+
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if(mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                // Close mobile menu when a link is clicked
+                const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+                for (let link of mobileMenuLinks) {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                }
+            }
+        });
+    </script>
 </body>
-</html> 
+</html>

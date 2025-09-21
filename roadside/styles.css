@@ -72,7 +72,7 @@
     object-position: right center;
     display: block;
     position: static;
-    background: var(--dark-green);
+    background: #142f20;
 }
 
 .hero-buttons {

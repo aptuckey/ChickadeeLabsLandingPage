@@ -1,204 +1,351 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chickadee Labs</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Chickadee Labs | Organic Precision</title>
     <link rel="icon" type="image/x-icon" href="assets/new_CL_favicon.ico">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-22PD07E3K9"></script>
     <script>
-        // Custom Tailwind configuration to include your color palette
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-22PD07E3K9');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
-                    colors: {
-                        'brand-light-cream': '#F1F7ED',
-                        'brand-dark-slate': '#243E36',
-                        'brand-sage': '#7CA982',
-                        'brand-light-green': '#E0EEC6',
-                        'brand-gold': '#C2A83E',
-                        'roadside-green':'#255439',
-                        'irist-blue':'#0B2A4A'
+                    "colors": {
+                        "outline": "#727975",
+                        "surface-container-high": "#d1efe3",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#a3d2a8",
+                        "tertiary-container": "#174123",
+                        "on-secondary-fixed": "#221b00",
+                        "tertiary": "#002a10",
+                        "secondary": "#705d00",
+                        "on-tertiary-container": "#80ad86",
+                        "outline-variant": "#c1c8c4",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#544600",
+                        "on-background": "#052019",
+                        "primary": "#0d2821",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#cbe9dd",
+                        "surface-dim": "#c3e1d5",
+                        "secondary-fixed-dim": "#e1c558",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#cbe9dd",
+                        "surface": "#e6fff5",
+                        "primary-fixed-dim": "#b0cdc2",
+                        "inverse-on-surface": "#d9f7eb",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#cbe9dd",
+                        "on-primary-fixed": "#052019",
+                        "on-primary-container": "#8ca99e",
+                        "background": "#e6fff5",
+                        "on-secondary-container": "#756100",
+                        "surface-container": "#d7f5e9",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#243e36",
+                        "on-surface": "#052019",
+                        "on-tertiary-fixed-variant": "#254f30",
+                        "tertiary-fixed": "#bfeec3",
+                        "inverse-surface": "#1b352d",
+                        "on-surface-variant": "#424845",
+                        "surface-tint": "#49645b",
+                        "secondary-container": "#fcde6e",
+                        "on-tertiary-fixed": "#00210b",
+                        "surface-container-low": "#dcfaee",
+                        "inverse-primary": "#b0cdc2",
+                        "surface-bright": "#e6fff5",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#324c43",
+                        "secondary-fixed": "#ffe171"
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
                     },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
                 }
             }
         }
     </script>
+
     <style>
-        /* Simple smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Adding a subtle pattern to the hero section for texture */
-        .hero-pattern {
-            background-color: #243e36;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%237ca982' fill-opacity='0.1' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.99-7.5L26 15v19L13 41.5 0 34V15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
         }
     </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-22PD07E3K9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-22PD07E3K9');
-</script>
-<body class="bg-brand-light-cream text-brand-dark-slate font-sans">
+<body class="bg-surface text-on-surface selection:bg-secondary-container/30">
 
-    <!-- Header -->
-    <header id="home" class="bg-brand-light-cream/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <!-- UPDATED: Logo with colored circle background -->
-                <div class="bg-brand-sage rounded-full flex items-center justify-center h-12 w-12 shadow-sm">
-                    <img src="assets/New_CL_Logo.png" alt="Chickadee Labs Logo" class="h-8 w-8">
-                </div>
-                <span class="text-xl font-bold text-brand-dark-slate">Chickadee Labs</span>
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-emerald-50/80 dark:bg-emerald-950/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(13,40,33,0.04)]">
+    <div class="flex justify-between items-center w-full px-12 py-6 max-w-7xl mx-auto font-inter tracking-tight font-light">
+        <a href="#home" class="flex items-center gap-3">
+            <div class="bg-emerald-700/20 rounded-full h-10 w-10 flex items-center justify-center">
+                <img src="assets/New_CL_Logo.png" alt="Chickadee Labs Logo" class="h-7 w-7">
             </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="text-brand-dark-slate hover:text-brand-gold transition-colors duration-300">Home</a>
-                <a href="#products" class="text-brand-dark-slate hover:text-brand-gold transition-colors duration-300">Products</a>
-                <a href="#contact" class="text-brand-dark-slate hover:text-brand-gold transition-colors duration-300">Contact</a>
-                <a href="https://www.buymeacoffee.com/chickadeelabs" class="w-40"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a cofee&emoji=☕&slug=chickadeelabs&button_colour=243e36&font_colour=ffffff&font_family=Arial&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-brand-dark-slate focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2 text-brand-dark-slate hover:text-brand-gold">Home</a>
-            <a href="#products" class="block py-2 text-brand-dark-slate hover:text-brand-gold">Products</a>
-            <a href="#contact" class="block py-2 text-brand-dark-slate hover:text-brand-gold">Contact</a>
+            <span class="text-lg font-medium tracking-widest uppercase text-emerald-900 dark:text-emerald-100">Chickadee Labs</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-10">
+            <a data-section="products" class="nav-link transition-colors duration-500" href="#products">Apps</a>
+            <a data-section="philosophy" class="nav-link transition-colors duration-500" href="#philosophy">Philosophy</a>
+            <a data-section="contact" class="nav-link transition-colors duration-500" href="#contact">Contact</a>
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-pattern min-h-[60vh] md:min-h-[70vh] flex items-center justify-center text-center text-white p-6">
-            <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-down">Welcome to Chickadee Labs</h1>
-                <p id="slogan" class="text-lg md:text-xl text-brand-light-cream/80 animate-fade-in-up h-8"></p>
+        <div class="hidden md:flex items-center gap-6">
+            <a href="#contact" class="px-6 py-2 border border-outline-variant/30 text-primary font-medium rounded-full hover:bg-primary-container hover:text-on-primary transition-all duration-500 text-sm tracking-wide">
+                Partner With Us
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-emerald-900 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-12 pb-6 border-t border-outline-variant/10 bg-emerald-50/95">
+        <a data-section="products" href="#products" class="mobile-nav-link block py-3 transition-colors">Apps</a>
+        <a data-section="philosophy" href="#philosophy" class="mobile-nav-link block py-3 transition-colors">Philosophy</a>
+        <a data-section="contact" href="#contact" class="mobile-nav-link block py-3 transition-colors">Contact</a>
+        <a href="https://www.buymeacoffee.com/chickadeelabs" target="_blank" rel="noopener noreferrer" class="block py-3">
+            <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=chickadeelabs&button_colour=243e36&font_colour=ffffff&font_family=Arial&outline_colour=ffffff&coffee_colour=FFDD00" alt="Buy me a coffee" class="w-36"/>
+        </a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="home" class="relative pt-48 pb-32 overflow-hidden bg-surface">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-15">
+        <img alt="Background Texture" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjIlXltbfjye1ZTqtGGkpuiNpOk4a-KULwO6PetDvhbliYh6ZHzcJN_Yc1yXbDdffHt0OvHmPAKyuG14LQVRibRqhPT3xfMCeb1Q9OjJYDCGepTUp4pIKjY4uUhGoVhNJ8Z7s1nZF4oUAjaSm1Y5KFkg2nr6TXjQV0y_zEUUl1zM9OnQwzoVS_fIp3fhZ0bStWciV7A4clqTx4R6szcd0ww__fZS0RpMRiD1J7EXaPAl3e0NMycB2jSA3lu3JiBj8qyyQOcBf1McQ"/>
+    </div>
+    <div class="max-w-7xl mx-auto px-12 relative z-10">
+        <div class="max-w-3xl">
+<h1 class="text-[3.5rem] leading-[1.1] font-light tracking-tight text-primary mb-10">
+                Made by humans, <br/>for <span class="italic font-normal">humans.</span>
+            </h1>
+            <p class="text-lg text-on-surface-variant font-light leading-relaxed max-w-xl mb-12">
+                We architect digital experiences that reject the sterile in favor of the sophisticated. Precision engineered, naturally inspired.
+            </p>
+            <div class="flex items-center gap-8">
+                <a href="#products" class="bg-primary text-on-primary px-8 py-4 rounded-md font-medium tracking-wide shadow-xl shadow-primary/10 hover:opacity-90 transition-opacity">
+                    Explore Our Work
+                </a>
+                <a href="#philosophy" class="flex items-center gap-2 group text-primary font-medium py-4">
+                    <span>Our Core Philosophy</span>
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </a>
             </div>
-        </section>
+        </div>
+    </div>
+    <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+        <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent"></div>
+    </div>
+</header>
 
-        <!-- Products Section -->
-        <section id="products" class="py-20 md:py-28">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark-slate">Our Apps</h2>
-                    <!-- <p class="text-brand-dark-slate/70 mt-2">A showcase of our passion projects.</p> -->
-                </div>
-                <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-                    <!-- Product Card 1 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <div class="p-8 bg-roadside-green">
-                           <img src="assets/RoadsideLogo.png" alt="Roadside App Icon" class="w-full h-48 object-contain rounded-lg">
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-2 text-brand-dark-slate">Roadside</h3>
-                            <p class="text-brand-dark-slate/80 mb-6">A fresh way to find and sell local produce, connecting communities with farmers.</p>
-                            <a href="roadside/index.html" target="_blank" class="inline-block bg-brand-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors duration-300">Learn More</a>
-                        </div>
-                    </div>
-                    <!-- Product Card 2 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                         <div class="p-8 bg-irist-blue">
-                           <img src="assets/IristLogo.png" alt="Project Irist App Icon" class="w-full h-48 object-contain rounded-lg">
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-2 text-brand-dark-slate">Project Irist</h3>
-                            <p class="text-brand-dark-slate/80 mb-6">The essential 20-20-20 timer for Windows to help protect your eyes during screen time.</p>
-                            <a href="projectIrist/index.html" target="_blank" class="inline-block bg-brand-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors duration-300">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<!-- Product Showcase (Bento Layout) -->
+<section id="products" class="py-40 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-12">
+        <div class="grid grid-cols-12 gap-8 items-start">
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-brand-dark-slate text-brand-light-cream">
-        <div class="container mx-auto px-6 py-12">
-            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-                    <p class="text-brand-light-cream/80">Have a question or want to work with us?</p>
-                    <a href="mailto:support@chickadee-labs.com" class="text-brand-gold hover:underline mt-2 inline-block">support@chickadee-labs.com</a>
-                </div>
-                <!-- Social Links -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="https://www.linkedin.com/company/chickadee-labs/" target="_blank" class="text-brand-light-cream/80 hover:text-white transition-colors duration-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+            <!-- Main Focus Card: Roadside -->
+            <div class="col-span-12 lg:col-span-7 group">
+                <div class="bg-surface-container-lowest p-12 rounded-xl transition-all duration-700 hover:shadow-2xl hover:shadow-primary/5">
+                    <div class="mb-12 overflow-hidden rounded-lg aspect-[16/9] relative">
+                        <img class="absolute inset-0 w-full h-full object-cover grayscale" src="roadside/assets/cornfield.jpg" alt="Cornfield"/>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-light text-primary">Roadside</h3>
+                        <p class="text-on-surface-variant font-light leading-relaxed max-w-lg">
+                            A fresh way to find and sell local produce, connecting communities with farmers.
+                        </p>
+                        <a class="inline-flex items-center gap-2 text-secondary font-medium pt-4 group/link" href="roadside/index.html" target="_blank" rel="noopener noreferrer">
+                            Learn about Roadside
+                            <span class="material-symbols-outlined text-sm">north_east</span>
                         </a>
                     </div>
                 </div>
-                 <!-- Quick Links -->
-                 <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul>
-                        <li><a href="#home" class="text-brand-light-cream/80 hover:text-white transition-colors duration-300">Home</a></li>
-                        <li class="mt-2"><a href="#products" class="text-brand-light-cream/80 hover:text-white transition-colors duration-300">Products</a></li>
-                    </ul>
+            </div>
+
+            <!-- Secondary Track -->
+            <div class="col-span-12 lg:col-span-5 space-y-8">
+
+                <!-- Project Irist Card -->
+                <div class="bg-surface-container p-12 rounded-xl transition-all duration-700 hover:bg-surface-container-high border-b border-outline-variant/10">
+                    <div class="flex flex-col justify-between h-full space-y-12">
+                        <div>
+                            <h3 class="text-xl font-light text-primary mb-4">Project Irist</h3>
+                            <p class="text-sm text-on-surface-variant font-light leading-relaxed mb-6">
+                                The essential 20-20-20 timer for Windows to help protect your eyes during screen time.
+                            </p>
+                            <a href="projectIrist/index.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-secondary font-medium group/link">
+                                Learn about Project Irist
+                                <span class="material-symbols-outlined text-sm">north_east</span>
+                            </a>
+                            <div class="flex gap-2 mt-6">
+                                <span class="px-3 py-1 bg-surface-container-highest text-[10px] uppercase tracking-widest rounded-full font-medium">Windows</span>
+                                <span class="px-3 py-1 bg-surface-container-highest text-[10px] uppercase tracking-widest rounded-full font-medium">Eye Health</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote Card -->
+                <div class="bg-primary p-12 rounded-xl text-on-primary shadow-2xl shadow-primary/20 flex flex-col justify-center items-center text-center space-y-6">
+                    <h4 class="text-lg font-light tracking-widest uppercase text-secondary-fixed">The Lab Method</h4>
+                    <p class="text-primary-fixed-dim font-light italic text-sm">
+                        <!-- TODO: Add your philosophy/mission quote here -->
+                        "The best tool is the one you stop noticing."
+                    </p>
+                    <div class="w-12 h-[1px] bg-secondary-fixed/30"></div>
                 </div>
             </div>
-            <div class="mt-12 border-t border-brand-sage/20 pt-6 text-center text-brand-light-cream/60">
-                <p>&copy; 2025 Chickadee Labs. All rights reserved.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Philosophy Section -->
+<section id="philosophy" class="py-48 bg-surface-container-lowest">
+    <div class="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+        <div class="relative">
+            <div class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+                <!-- TODO: Replace with a Chickadee Labs photo -->
+                <img class="w-full h-full object-cover" alt="TODO: Add a photo representing Chickadee Labs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjd17xd1UpC4gUT2OtVAbeMVxFFrWt5mZBTd7Tj9YrUJh2dnJPToTHlTjUkrSyHfxgQg6Si-83Onb-ITfqzM2s375YNSFx2w3JoKjgKQ-CIwCcChk9t9_I41YaFKCXYH2HblsZfAC550VTIBUFZ4-vc1T5OHxk_hOpu9GuSKEux7PAnvNHvvvr8b8Tvb6EFlzj9X6zHn-6f7y6LyHwOPsTNB7CV3-niKkUnsGyhLPPvQAk4q3Jwfi5aNXsgpdg0u__tB1-P26R9Rs"/>
+            </div>
+            <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-surface p-8 shadow-2xl shadow-primary/5 rounded-xl hidden lg:block">
+                <p class="text-2xl font-light text-primary tracking-tighter">100% Indie funded</p>
+                <p class="text-[10px] text-on-surface-variant mt-4 leading-tight">No VC. No investors. No corporate influence. Just us.</p>
             </div>
         </div>
-    </footer>
 
-     <script>
-        // Wait for the DOM to be fully loaded before running scripts
-        document.addEventListener('DOMContentLoaded', () => {
-            const slogans = [
-                "Let us cook.",
-                "The softest software.",
-                "Drink your tea.",
-                "You know what they say...",
-                "We'll burn that bridge when we get to it."
-            ];
-            
-            const sloganElement = document.getElementById('slogan');
-            if (sloganElement) {
-                const randomIndex = Math.floor(Math.random() * slogans.length);
-                sloganElement.textContent = slogans[randomIndex];
-            }
+        <div class="space-y-12">
+            <h2 class="text-4xl font-light text-primary tracking-tight leading-snug">
+                <!-- TODO: Update philosophy section headline -->
+                Beyond the Grid: <br/>Our Designing <span class="text-secondary">Ethos</span>
+            </h2>
+            <div class="space-y-8">
+                <div class="group border-l-2 border-surface-container pl-8 py-2 hover:border-secondary transition-colors">
+                    <!-- TODO: Add first design principle -->
+                    <h4 class="text-lg font-normal text-primary mb-2">Go Touch Grass</h4>
+                    <p class="text-on-surface-variant font-light text-sm">We build apps to help. Not to hook.</p>
+                </div>
+                <div class="group border-l-2 border-surface-container pl-8 py-2 hover:border-secondary transition-colors">
+                    <!-- TODO: Add second design principle -->
+                    <h4 class="text-lg font-normal text-primary mb-2">We build things we'd actually use</h4>
+                    <p class="text-on-surface-variant font-light text-sm">We focus on creating solutions that genuinely improve people's lives.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            // --- Mobile Menu Toggle ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+<!-- Footer -->
+<footer id="contact" class="w-full mt-32 bg-emerald-950 dark:bg-black">
+    <div class="max-w-7xl mx-auto px-12 py-24">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-12 font-inter text-xs tracking-widest uppercase">
 
-            if(mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <span class="text-sm font-light text-amber-500/80 tracking-[0.3em] uppercase">Chickadee Labs</span>
+                <p class="text-emerald-50/80 normal-case tracking-normal">Software, Naturally.</p>
+                <a href="mailto:support@chickadee-labs.com" class="text-emerald-100/60 hover:text-amber-400 transition-colors normal-case tracking-normal text-xs">support@chickadee-labs.com</a>
+                <a href="https://www.linkedin.com/company/chickadee-labs/" target="_blank" rel="noopener noreferrer" class="text-emerald-100/40 hover:text-white transition-all duration-300 normal-case">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-label="LinkedIn"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                </a>
+            </div>
+
+            <div class="flex gap-12">
+                <a class="text-emerald-100/40 hover:text-white transition-all duration-300" href="roadside/index.html">Roadside</a>
+                <a class="text-emerald-100/40 hover:text-white transition-all duration-300" href="projectIrist/index.html">Project Irist</a>
+                <a class="text-emerald-100/40 hover:text-white transition-all duration-300" href="#">Privacy</a><!-- TODO: Add privacy policy page -->
+                <a class="text-emerald-100/40 hover:text-white transition-all duration-300" href="#">Terms</a><!-- TODO: Add terms of service page -->
+            </div>
+
+            <div class="flex flex-col items-center gap-4">
+                <span class="text-emerald-100/40 text-[10px]">© 2025 Chickadee Labs.</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            for (let link of mobileMenu.getElementsByTagName('a')) {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
                 });
-                
-                // Close mobile menu when a link is clicked
-                const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-                for (let link of mobileMenuLinks) {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                }
             }
-        });
-    </script>
+        }
+
+        // Scroll spy
+        const sections = ['products', 'philosophy', 'contact'];
+        const desktopLinks = document.querySelectorAll('.nav-link');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        const activeDesktop   = ['text-amber-600', 'font-medium', 'border-b', 'border-amber-500/30'];
+        const inactiveDesktop = ['text-emerald-900/60', 'hover:text-emerald-950'];
+        const activeMobile    = ['text-amber-600', 'font-medium'];
+        const inactiveMobile  = ['text-emerald-900/70', 'hover:text-emerald-950'];
+
+        function setActive(activeId) {
+            desktopLinks.forEach(link => {
+                const isActive = link.dataset.section === activeId;
+                activeDesktop.forEach(c => link.classList.toggle(c, isActive));
+                inactiveDesktop.forEach(c => link.classList.toggle(c, !isActive));
+            });
+            mobileLinks.forEach(link => {
+                const isActive = link.dataset.section === activeId;
+                activeMobile.forEach(c => link.classList.toggle(c, isActive));
+                inactiveMobile.forEach(c => link.classList.toggle(c, !isActive));
+            });
+        }
+
+        function onScroll() {
+            const scrollPos = window.scrollY + window.innerHeight * 0.4;
+            let current = null;
+            for (const id of sections) {
+                const el = document.getElementById(id);
+                if (el && el.offsetTop <= scrollPos) current = id;
+            }
+            setActive(current);
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    });
+</script>
+
 </body>
 </html>

@@ -1,77 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roadside - Your Ultimate Breakdown Companion</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#255439', // blue-500 as fallback primary
-                        secondary: '#FEC909', // emerald-500 as fallback secondary
-                    }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Privacy Policy - Roadside</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "inverse-surface": "#2a313d",
+                    "inverse-on-surface": "#ebf1ff",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#dce2f3",
+                    "on-background": "#151c27",
+                    "outline": "#717972",
+                    "outline-variant": "#c1c9c0",
+                    "error-container": "#ffdad6",
+                    "background": "#f9f9ff",
+                    "surface-dim": "#d3daea",
+                    "on-tertiary-fixed": "#261a00",
+                    "primary-fixed-dim": "#9fd2af",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#453200",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "on-surface": "#151c27",
+                    "primary": "#0a3d24",
+                    "primary-container": "#255439",
+                    "on-primary-fixed": "#002110",
+                    "on-secondary-fixed-variant": "#005301",
+                    "on-primary-container": "#95c7a4",
+                    "surface-tint": "#39684b",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f9f9ff",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#9ff88a",
+                    "on-secondary-container": "#1d7417",
+                    "surface-container-highest": "#dce2f3",
+                    "surface-container-low": "#f0f3ff",
+                    "secondary": "#156e10",
+                    "on-surface-variant": "#414942",
+                    "surface-container": "#e7eefe",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#205035",
+                    "secondary-fixed-dim": "#84db71",
+                    "tertiary-fixed-dim": "#fabd00",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9ff",
+                    "primary-fixed": "#bbefca",
+                    "tertiary-fixed": "#ffdf9e",
+                    "surface-container-high": "#e2e8f8",
+                    "tertiary-container": "#614700",
+                    "on-tertiary-container": "#ecb200",
+                    "on-secondary-fixed": "#002200",
+                    "inverse-primary": "#9fd2af",
+                    "secondary-fixed": "#9ff88a"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+                },
+                "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
                 }
-            }
-        }
-    </script>
+            },
+        },
+    }
+</script>
+<style>
+    html { scroll-behavior: smooth; }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
 </head>
-<body class="bg-gray-50 font-sans">
-    <!-- Hero Section -->
-    <div class="relative overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="relative z-20 w-full sm:w-full md:w-full lg:w-full lg:w-full lg:pb-28 xl:pb-32">
-                <!-- Navigation -->
-                <nav class="relative pt-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-                    <div class="flex items-center">
-                        <img src="../assets/RoadsideLogo.png" alt="Roadside Logo" class="h-16 w-16 ml-2">
-                        <span class="ml-2 text-xl font-bold text-white">Roadside</span>
-                    </div>  
-            </div>
-            <div class=" inset-y-0 right-0 w-full top-0">
-                <img class="absolute inset-0 h-full w-full object-cover -z-10 pointer-events-none" src="https://images.unsplash.com/photo-1505764706515-aa95265c5abc?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Roadside assistance app">
-                <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
-            </div>
-        </div>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container min-h-screen flex flex-col">
+
+<!-- Nav -->
+<header class="bg-white/80 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
+    <a href="index.html" class="text-2xl font-extrabold text-emerald-900 tracking-tighter font-headline">Roadside</a>
+    <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold font-label flex items-center gap-2">
+        <span class="material-symbols-outlined text-sm">arrow_back</span>
+        Back to Home
+    </a>
+</nav>
+</header>
+
+<!-- Content -->
+<main class="flex-1 py-24 px-8">
+<div class="max-w-3xl mx-auto">
+
+    <!-- Header -->
+    <div class="mb-16">
+        <span class="inline-block py-1 px-4 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-6 font-label">Legal</span>
+        <h1 class="font-headline text-5xl md:text-6xl font-extrabold text-primary tracking-tight mb-6">Privacy Policy</h1>
+        <p class="text-on-surface-variant text-lg leading-relaxed">Last updated 2026. Questions? Reach us at <a href="mailto:support@chickadee-labs.com" class="text-secondary underline underline-offset-4 hover:text-primary transition-colors">support@chickadee-labs.com</a>.</p>
     </div>
 
-    <!-- Mission Statement -->
-    <div class="py-16 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-left">
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Privacy Policy
-                </p>
-                 <section class="privacy-content">
+    <!-- Policy Sections -->
+    <div class="divide-y divide-outline-variant border border-outline-variant rounded-xl overflow-hidden bg-surface-container-lowest">
 
-            <h2 class="text-2xl pt-6">Account Information </h2>
-            <div class="privacy-text">To use this app, you must create an account with an email address and password. This information is used solely for login and account management. We do not use, share, or sell your email or password for any other purpose.</div>
-
-                <h2 class="text-2xl pt-6">Public Contributions</h2>
-            <div class="privacy-text">You may comment on and mark produce at roadside stands. These contributions are publicly visible to help other users but do not include any personal information. We encourage you not to share personal details in these areas.</div>
-
-                <h2 class="text-2xl pt-6">Data Collection and Sharing</h2>
-            <div class="privacy-text">We do not collect or share any additional user data. We do not track, sell, or distribute your information—either to other users or third parties.</div>
-
-                <h2 class="text-2xl pt-6">Your Privacy, Your Control</h2>
-            <div class="privacy-text">You control your account and contributions. No personal data beyond your email and password is collected, and your information is never used outside the app.</div>
-            
-            
-        </section>
+        <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-secondary">person</span>
+                <h2 class="font-headline text-xl font-bold text-on-surface">Account Information</h2>
             </div>
+            <p class="text-on-surface-variant leading-relaxed">To use this app, you must create an account with an email address and password. This information is used solely for login and account management. We do not use, share, or sell your email or password for any other purpose.</p>
         </div>
+
+        <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-secondary">add_location_alt</span>
+                <h2 class="font-headline text-xl font-bold text-on-surface">Public Contributions</h2>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed">You may comment on and mark produce at roadside stands. These contributions are publicly visible to help other users but do not include any personal information. We encourage you not to share personal details in these areas.</p>
+        </div>
+
+        <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-secondary">database</span>
+                <h2 class="font-headline text-xl font-bold text-on-surface">Data Collection and Sharing</h2>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed">We do not collect or share any additional user data. We do not track, sell, or distribute your information — either to other users or third parties.</p>
+        </div>
+
+        <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-secondary">shield</span>
+                <h2 class="font-headline text-xl font-bold text-on-surface">Your Privacy, Your Control</h2>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed">You control your account and contributions. No personal data beyond your email and password is collected, and your information is never used outside the app.</p>
+        </div>
+
     </div>
 
-  
-    </footer>
+    <!-- Trust badge -->
+    <div class="mt-8 flex items-center gap-4 bg-primary/5 border border-primary/10 rounded-xl p-6">
+        <span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Roadside will never sell, share, or transmit your personal data to any third party — ever.</p>
+    </div>
 
-    <script>
-        feather.replace();
-    </script>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-emerald-900 py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto w-full">
+    <div class="space-y-4">
+        <div class="text-lg font-bold text-emerald-50 font-headline">Roadside</div>
+        <div class="text-xs uppercase tracking-widest text-emerald-200/60 font-body">
+            © 2026 Roadside. Cultivating local growth.
+        </div>
+    </div>
+    <div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+        <a class="text-xs uppercase tracking-widest text-emerald-200/60 hover:text-white hover:underline decoration-yellow-500 underline-offset-4 transition-opacity opacity-80 hover:opacity-100 font-body" href="privacyPolicy.html">Privacy</a>
+        <a class="text-xs uppercase tracking-widest text-emerald-200/60 hover:text-white hover:underline decoration-yellow-500 underline-offset-4 transition-opacity opacity-80 hover:opacity-100 font-body" href="https://apps.apple.com/us/app/roadside-eat-local-produce/id6752875888" target="_blank" rel="noopener">App Store</a>
+        <a class="text-xs uppercase tracking-widest text-emerald-200/60 hover:text-white hover:underline decoration-yellow-500 underline-offset-4 transition-opacity opacity-80 hover:opacity-100 font-body" href="https://play.google.com/store/apps/details?id=com.chickadeelabs.roadside&pcampaignid=web_share" target="_blank" rel="noopener">Google Play</a>
+    </div>
+</div>
+</footer>
+
 </body>
 </html>

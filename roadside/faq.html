@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ - Roadside</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "inverse-surface": "#2a313d",
+                    "inverse-on-surface": "#ebf1ff",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#dce2f3",
+                    "on-background": "#151c27",
+                    "outline": "#717972",
+                    "outline-variant": "#c1c9c0",
+                    "error-container": "#ffdad6",
+                    "background": "#f9f9ff",
+                    "surface-dim": "#d3daea",
+                    "on-tertiary-fixed": "#261a00",
+                    "primary-fixed-dim": "#9fd2af",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#453200",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "on-surface": "#151c27",
+                    "primary": "#0a3d24",
+                    "primary-container": "#255439",
+                    "on-primary-fixed": "#002110",
+                    "on-secondary-fixed-variant": "#005301",
+                    "on-primary-container": "#95c7a4",
+                    "surface-tint": "#39684b",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f9f9ff",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#9ff88a",
+                    "on-secondary-container": "#1d7417",
+                    "surface-container-highest": "#dce2f3",
+                    "surface-container-low": "#f0f3ff",
+                    "secondary": "#156e10",
+                    "on-surface-variant": "#414942",
+                    "surface-container": "#e7eefe",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#205035",
+                    "secondary-fixed-dim": "#84db71",
+                    "tertiary-fixed-dim": "#fabd00",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9ff",
+                    "primary-fixed": "#bbefca",
+                    "tertiary-fixed": "#ffdf9e",
+                    "surface-container-high": "#e2e8f8",
+                    "tertiary-container": "#614700",
+                    "on-tertiary-container": "#ecb200",
+                    "on-secondary-fixed": "#002200",
+                    "inverse-primary": "#9fd2af",
+                    "secondary-fixed": "#9ff88a"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+                },
+                "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+                }
+            },
+        },
+    }
+</script>
+<style>
+    html { scroll-behavior: smooth; }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .faq-answer {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s ease;
+    }
+    .faq-answer.open {
+        grid-template-rows: 1fr;
+    }
+    .faq-answer > div {
+        overflow: hidden;
+    }
+    .faq-chevron {
+        transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-chevron {
+        transform: rotate(180deg);
+    }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container min-h-screen flex flex-col">
+
+<!-- Nav -->
+<header class="bg-white/80 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
+    <a href="index.html" class="text-2xl font-extrabold text-emerald-900 tracking-tighter font-headline">Roadside</a>
+    <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold font-label flex items-center gap-2">
+        <span class="material-symbols-outlined text-sm">arrow_back</span>
+        Back to Home
+    </a>
+</nav>
+</header>
+
+<!-- Content -->
+<main class="flex-1 py-24 px-8">
+<div class="max-w-3xl mx-auto">
+
+    <!-- Header -->
+    <div class="mb-16">
+        <span class="inline-block py-1 px-4 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-6 font-label">Help Center</span>
+        <h1 class="font-headline text-5xl md:text-6xl font-extrabold text-primary tracking-tight mb-6">Frequently Asked Questions</h1>
+        <p class="text-on-surface-variant text-lg leading-relaxed">Everything you need to know about Roadside. Can't find what you're looking for? Reach out at <a href="mailto:support@chickadee-labs.com" class="text-secondary underline underline-offset-4 hover:text-primary transition-colors">support@chickadee-labs.com</a>.</p>
+    </div>
+
+    <!-- FAQ Groups -->
+    <div class="space-y-12">
+
+        <!-- Group: General -->
+        <div>
+            <h2 class="font-headline text-xs font-bold tracking-widest uppercase text-secondary mb-4">General</h2>
+            <div class="divide-y divide-outline-variant border border-outline-variant rounded-xl overflow-hidden bg-surface-container-lowest">
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left hover:bg-surface-container-low transition-colors">
+                        <span class="font-headline font-semibold text-on-surface">I own a stand. How often should I update it?</span>
+                        <span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0 ml-4">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div><p class="px-6 pb-5 text-on-surface-variant leading-relaxed">If you own a stand, we recommend updating it at least once a week to keep your customers informed. Best practice would be to update it whenever you put items out.</p></div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left hover:bg-surface-container-low transition-colors">
+                        <span class="font-headline font-semibold text-on-surface">How long do stands last?</span>
+                        <span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0 ml-4">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div><p class="px-6 pb-5 text-on-surface-variant leading-relaxed">If a stand is created and left untouched, it will last roughly two weeks. Roadside uses a decay algorithm. If users interact with a stand, and continue to update it, it will remain active.</p></div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left hover:bg-surface-container-low transition-colors">
+                        <span class="font-headline font-semibold text-on-surface">Can I see inactive stands?</span>
+                        <span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0 ml-4">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div><p class="px-6 pb-5 text-on-surface-variant leading-relaxed">Yes. On the map, you can edit the filter to include inactive stands. The filter button is on the right side of the search bar.</p></div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left hover:bg-surface-container-low transition-colors">
+                        <span class="font-headline font-semibold text-on-surface">How do I re-activate a stand?</span>
+                        <span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0 ml-4">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div><p class="px-6 pb-5 text-on-surface-variant leading-relaxed">To re-activate a stand, simply add a new report for produce at the same location. The new report will be merged into the existing stand.</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Group: Using the App -->
+        <!-- <div>
+            <h2 class="font-headline text-xs font-bold tracking-widest uppercase text-secondary mb-4">Using the App</h2>
+            <div class="divide-y divide-outline-variant border border-outline-variant rounded-xl overflow-hidden bg-surface-container-lowest">
+
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left hover:bg-surface-container-low transition-colors">
+                        <span class="font-headline font-semibold text-on-surface">Question placeholder 4</span>
+                        <span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0 ml-4">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div><p class="px-6 pb-5 text-on-surface-variant leading-relaxed">Answer placeholder — fill this in later.</p></div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left hover:bg-surface-container-low transition-colors">
+                        <span class="font-headline font-semibold text-on-surface">Question placeholder 5</span>
+                        <span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0 ml-4">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div><p class="px-6 pb-5 text-on-surface-variant leading-relaxed">Answer placeholder — fill this in later.</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </div> -->
+
+        <!-- Group: Contributing -->
+        <div>
+            <h2 class="font-headline text-xs font-bold tracking-widest uppercase text-secondary mb-4">Contributing</h2>
+            <div class="divide-y divide-outline-variant border border-outline-variant rounded-xl overflow-hidden bg-surface-container-lowest">
+
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left hover:bg-surface-container-low transition-colors">
+                        <span class="font-headline font-semibold text-on-surface">Can I delete a contribution?</span>
+                        <span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0 ml-4">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div><p class="px-6 pb-5 text-on-surface-variant leading-relaxed">Yes. Users can delete their contributions for up to an hour after submitting them. Navigate to Your Activity > Edit the submission > Delete.</p></div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left hover:bg-surface-container-low transition-colors">
+                        <span class="font-headline font-semibold text-on-surface">I don't see the produce item that I'm looking for</span>
+                        <span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0 ml-4">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div><p class="px-6 pb-5 text-on-surface-variant leading-relaxed">If you don't see a specific produce item, you can suggest it to our support team. Navigate to Settings > Feedback</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-16 bg-primary rounded-xl p-8 text-center">
+        <h2 class="font-headline text-2xl font-bold text-white mb-2">Still have questions?</h2>
+        <p class="text-on-primary-container mb-6">Our team is happy to help.</p>
+        <a href="mailto:support@chickadee-labs.com" class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-6 py-3 rounded-xl font-semibold font-label hover:scale-105 transition-transform active:scale-95">
+            <span class="material-symbols-outlined text-sm">mail</span>
+            Contact Support
+        </a>
+    </div>
+
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-emerald-900 py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto w-full">
+    <div class="space-y-4">
+        <div class="text-lg font-bold text-emerald-50 font-headline">Roadside</div>
+        <div class="text-xs uppercase tracking-widest text-emerald-200/60 font-body">
+            © 2026 Roadside. Eat Local Produce.
+        </div>
+    </div>
+    <div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+        <a class="text-xs uppercase tracking-widest text-emerald-200/60 hover:text-white hover:underline decoration-yellow-500 underline-offset-4 transition-opacity opacity-80 hover:opacity-100 font-body" href="privacyPolicy.html">Privacy</a>
+        <a class="text-xs uppercase tracking-widest text-emerald-200/60 hover:text-white hover:underline decoration-yellow-500 underline-offset-4 transition-opacity opacity-80 hover:opacity-100 font-body" href="https://apps.apple.com/us/app/roadside-eat-local-produce/id6752875888" target="_blank" rel="noopener">App Store</a>
+        <a class="text-xs uppercase tracking-widest text-emerald-200/60 hover:text-white hover:underline decoration-yellow-500 underline-offset-4 transition-opacity opacity-80 hover:opacity-100 font-body" href="https://play.google.com/store/apps/details?id=com.chickadeelabs.roadside&pcampaignid=web_share" target="_blank" rel="noopener">Google Play</a>
+    </div>
+</div>
+</footer>
+
+<script>
+    function toggleFaq(btn) {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('open');
+        item.classList.toggle('open', !isOpen);
+        answer.classList.toggle('open', !isOpen);
+    }
+</script>
+</body>
+</html>
